@@ -1,0 +1,25 @@
+@let stats = stats$ | async;
+
+<table>
+  @for (stat of stats; track stat.id) {
+    <tr>
+      <td>
+        {{ stat.month}} / {{ stat.year}}:
+      </td>
+    </tr>
+    <tr>
+    <td>
+        Success: {{ stat.nbSucess}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Echec: {{ stat.nbFailed}}
+      </td>
+    </tr>
+    <br>
+  }
+
+</table>
+
+
